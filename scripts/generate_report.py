@@ -132,7 +132,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
                     f"{API_BASE}/chat/completions",
                     headers=headers,
                     json=payload,
-                    timeout=120,
+                    timeout=300,
                 )
                 if resp.status_code == 429:
                     wait = 60 * (attempt + 1)
