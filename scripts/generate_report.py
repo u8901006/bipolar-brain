@@ -33,6 +33,44 @@ SYSTEM_PROMPT = (
 )
 
 
+def repair_json(text: str) -> dict | None:
+    import re
+
+    text = text.strip()
+    if not text.startswith("{"):
+        return None
+
+    open_braces = text.count("{") - text.count("}")
+    open_brackets = text.count("[") - text.count("]")
+
+    if open_braces > 0 or open_brackets > 0:
+        if re.search(r'"all_papers"\s*:\s*\[$', text, re.MULTILINE):
+            text += "]"
+        elif re.search(r'"keywords"\s*:\s*\[$', text, re.MULTILINE):
+            text += "]}"
+        else:
+            last_array = text.rfind("]")
+            last_brace = text.rfind("}")
+            last_valid = max(last_array, last_brace)
+            if last_valid > 0:
+                text = text[: last_valid + 1]
+            text += "]" * max(0, open_brackets)
+            text += "}" * max(0, open_braces)
+
+    try:
+        result = json.loads(text)
+        if not isinstance(result, dict):
+            return None
+        result.setdefault("top_picks", [])
+        result.setdefault("all_papers", [])
+        result.setdefault("keywords", [])
+        result.setdefault("topic_distribution", {})
+        result.setdefault("market_summary", "")
+        return result
+    except (json.JSONDecodeError, ValueError):
+        return None
+
+
 def load_papers(input_path: str) -> dict:
     if input_path == "-":
         data = json.load(sys.stdin)
@@ -116,7 +154,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
         ],
         "temperature": 0.3,
         "top_p": 0.9,
-        "max_tokens": 8192,
+        "max_tokens": 16384,
     }
 
     models_to_try = [MODEL_NAME, "glm-4-flash", "glm-4"]
@@ -146,7 +184,12 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
                     text = text.split("\n", 1)[1] if "\n" in text else text[3:]
                     text = text.rstrip("`").strip()
 
-                result = json.loads(text)
+                try:
+                    result = json.loads(text)
+                except json.JSONDecodeError:
+                    result = repair_json(text)
+                    if result is None:
+                        raise
                 print(
                     f"[INFO] Analysis complete: {len(result.get('top_picks', []))} top picks, {len(result.get('all_papers', []))} total",
                     file=sys.stderr,
