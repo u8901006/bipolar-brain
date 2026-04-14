@@ -8,6 +8,7 @@ psychiatry, psychology, neuroscience, PT, OT, and TCM.
 import json
 import sys
 import argparse
+import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from urllib.request import urlopen, Request
@@ -136,83 +137,92 @@ def search_papers(query: str, retmax: int = 20) -> list[str]:
 def fetch_details(pmids: list[str]) -> list[dict]:
     if not pmids:
         return []
-    ids = ",".join(pmids)
-    params = f"?db=pubmed&id={ids}&retmode=xml"
-    url = PUBMED_FETCH + params
-    try:
-        req = Request(url, headers=HEADERS)
-        with urlopen(req, timeout=60) as resp:
-            xml_data = resp.read().decode()
-    except Exception as e:
-        print(f"[ERROR] PubMed fetch failed: {e}", file=sys.stderr)
-        return []
-
     papers = []
-    try:
-        root = ET.fromstring(xml_data)
-        for article in root.findall(".//PubmedArticle"):
-            medline = article.find(".//MedlineCitation")
-            art = medline.find(".//Article") if medline else None
-            if art is None:
-                continue
-
-            title_el = art.find(".//ArticleTitle")
-            title = (
-                (title_el.text or "").strip()
-                if title_el is not None and title_el.text
-                else ""
+    batch_size = 50
+    for i in range(0, len(pmids), batch_size):
+        batch = pmids[i : i + batch_size]
+        ids = ",".join(batch)
+        params = f"?db=pubmed&id={ids}&retmode=xml"
+        url = PUBMED_FETCH + params
+        try:
+            req = Request(url, headers=HEADERS)
+            with urlopen(req, timeout=60) as resp:
+                xml_data = resp.read().decode()
+        except Exception as e:
+            print(
+                f"[ERROR] PubMed fetch failed (batch {i // batch_size + 1}): {e}",
+                file=sys.stderr,
             )
-            if not title:
-                continue
+            continue
 
-            abstract_parts = []
-            for abs_el in art.findall(".//Abstract/AbstractText"):
-                label = abs_el.get("Label", "")
-                text = "".join(abs_el.itertext()).strip()
-                if label and text:
-                    abstract_parts.append(f"{label}: {text}")
-                elif text:
-                    abstract_parts.append(text)
-            abstract = " ".join(abstract_parts)[:2000]
+        try:
+            root = ET.fromstring(xml_data)
+            for article in root.findall(".//PubmedArticle"):
+                medline = article.find(".//MedlineCitation")
+                art = medline.find(".//Article") if medline else None
+                if art is None:
+                    continue
 
-            journal_el = art.find(".//Journal/Title")
-            journal = (
-                (journal_el.text or "").strip()
-                if journal_el is not None and journal_el.text
-                else ""
-            )
+                title_el = art.find(".//ArticleTitle")
+                title = (
+                    (title_el.text or "").strip()
+                    if title_el is not None and title_el.text
+                    else ""
+                )
+                if not title:
+                    continue
 
-            pub_date = art.find(".//PubDate")
-            date_str = ""
-            if pub_date is not None:
-                year = pub_date.findtext("Year", "")
-                month = pub_date.findtext("Month", "")
-                day = pub_date.findtext("Day", "")
-                parts = [p for p in [year, month, day] if p]
-                date_str = " ".join(parts)
+                abstract_parts = []
+                for abs_el in art.findall(".//Abstract/AbstractText"):
+                    label = abs_el.get("Label", "")
+                    text = "".join(abs_el.itertext()).strip()
+                    if label and text:
+                        abstract_parts.append(f"{label}: {text}")
+                    elif text:
+                        abstract_parts.append(text)
+                abstract = " ".join(abstract_parts)[:2000]
 
-            pmid_el = medline.find(".//PMID")
-            pmid = pmid_el.text if pmid_el is not None else ""
-            link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else ""
+                journal_el = art.find(".//Journal/Title")
+                journal = (
+                    (journal_el.text or "").strip()
+                    if journal_el is not None and journal_el.text
+                    else ""
+                )
 
-            keywords = []
-            for kw in medline.findall(".//KeywordList/Keyword"):
-                if kw.text:
-                    keywords.append(kw.text.strip())
+                pub_date = art.find(".//PubDate")
+                date_str = ""
+                if pub_date is not None:
+                    year = pub_date.findtext("Year", "")
+                    month = pub_date.findtext("Month", "")
+                    day = pub_date.findtext("Day", "")
+                    parts = [p for p in [year, month, day] if p]
+                    date_str = " ".join(parts)
 
-            papers.append(
-                {
-                    "pmid": pmid,
-                    "title": title,
-                    "journal": journal,
-                    "date": date_str,
-                    "abstract": abstract,
-                    "url": link,
-                    "keywords": keywords,
-                }
-            )
-    except ET.ParseError as e:
-        print(f"[ERROR] XML parse failed: {e}", file=sys.stderr)
+                pmid_el = medline.find(".//PMID")
+                pmid = pmid_el.text if pmid_el is not None else ""
+                link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else ""
+
+                keywords = []
+                for kw in medline.findall(".//KeywordList/Keyword"):
+                    if kw.text:
+                        keywords.append(kw.text.strip())
+
+                papers.append(
+                    {
+                        "pmid": pmid,
+                        "title": title,
+                        "journal": journal,
+                        "date": date_str,
+                        "abstract": abstract,
+                        "url": link,
+                        "keywords": keywords,
+                    }
+                )
+        except ET.ParseError as e:
+            print(f"[ERROR] XML parse failed: {e}", file=sys.stderr)
+
+        if i + batch_size < len(pmids):
+            time.sleep(0.5)
 
     return papers
 
@@ -250,6 +260,7 @@ def main():
         all_pmids.update(new)
         if new:
             print(f"  Query {i + 1}: +{len(new)} new papers", file=sys.stderr)
+        time.sleep(0.4)
 
     print(f"[INFO] Total unique PMIDs: {len(all_pmids)}", file=sys.stderr)
 
