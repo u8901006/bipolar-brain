@@ -84,9 +84,9 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
     tz_taipei = timezone(timedelta(hours=8))
     date_str = papers_data.get("date", datetime.now(tz_taipei).strftime("%Y-%m-%d"))
     paper_count = papers_data.get("count", 0)
-    papers_text = json.dumps(
-        papers_data.get("papers", []), ensure_ascii=False, indent=2
-    )
+    all_papers_raw = papers_data.get("papers", [])
+    papers_for_ai = all_papers_raw[:20]
+    papers_text = json.dumps(papers_for_ai, ensure_ascii=False, indent=2)
 
     prompt = f"""以下是 {date_str} 從 PubMed 抓取的最新雙相情緒障礙症相關文獻（共 {paper_count} 篇）。
 
@@ -137,9 +137,10 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
 原始文獻資料：
 {papers_text}
 
-請篩選出最重要的 TOP 5-8 篇論文放入 top_picks（按重要性排序），其餘放入 all_papers。
-每篇 paper 的 tags 請從以下選擇：雙相憂鬱、躁症發作、輕躁症、混合發作、鋰鹽治療、情緒穩定劑、抗精神病藥物、心理治療、認知行為治療、家庭焦點治療、人際社會節律治療、自殺防治、睡眠與晝夜節律、認知功能、功能復原、職能治療、物理治療與運動、中醫與針灸、神經影像、生物標記、基因學、兒少雙相、產期雙相、藥物遵從性、復發預防。
-記住：回傳純 JSON，不要用 ```json``` 包裹。"""
+請篩選出最重要的 TOP 5 篇論文放入 top_picks（按重要性排序），另外選最多 5 篇放入 all_papers（不需要 PICO，只需要簡短摘要）。
+其餘不需要的論文直接省略，不要輸出。
+每篇 paper 的 tags 請從以下選擇（最多 2 個）：雙相憂鬱、躁症發作、輕躁症、混合發作、鋰鹽治療、情緒穩定劑、抗精神病藥物、心理治療、認知行為治療、家庭焦點治療、人際社會節律治療、自殺防治、睡眠與晝夜節律、認知功能、功能復原、職能治療、物理治療與運動、中醫與針灸、神經影像、生物標記、基因學、兒少雙相、產期雙相、藥物遵從性、復發預防。
+記住：回傳純 JSON，不要用 ```json``` 包裹。輸出必須是完整可解析的 JSON，不要截斷。"""
 
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -154,7 +155,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
         ],
         "temperature": 0.3,
         "top_p": 0.9,
-        "max_tokens": 16384,
+        "max_tokens": 32768,
     }
 
     models_to_try = [MODEL_NAME, "glm-4-flash", "glm-4"]
