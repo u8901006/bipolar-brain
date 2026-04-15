@@ -16,7 +16,7 @@ import httpx
 API_BASE = os.environ.get(
     "ZHIPU_API_BASE", "https://open.bigmodel.cn/api/coding/paas/v4"
 )
-MODEL_NAME = os.environ.get("ZHIPU_MODEL", "glm-5.1")
+MODEL_NAME = os.environ.get("ZHIPU_MODEL", "GLM-5-Turbo")
 
 SYSTEM_PROMPT = (
     "你是雙相情緒障礙症（Bipolar Disorder）領域的資深研究員與科學傳播者。你的任務是：\n"
@@ -158,7 +158,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
         "max_tokens": 32768,
     }
 
-    models_to_try = [MODEL_NAME, "glm-4-flash", "glm-4"]
+    models_to_try = [MODEL_NAME, "GLM-4.7", "GLM-4.7-Flash"]
 
     for model in models_to_try:
         payload["model"] = model
