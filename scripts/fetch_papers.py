@@ -237,7 +237,20 @@ def main():
     )
     parser.add_argument("--output", default="-", help="Output file (- for stdout)")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
+    parser.add_argument("--exclude", default="", help="JSON file with PMIDs to exclude")
     args = parser.parse_args()
+
+    exclude_pmids = set()
+    if args.exclude:
+        try:
+            with open(args.exclude, "r", encoding="utf-8") as f:
+                exclude_pmids = set(json.load(f))
+            print(
+                f"[INFO] Excluding {len(exclude_pmids)} previously reported PMIDs",
+                file=sys.stderr,
+            )
+        except Exception as e:
+            print(f"[WARN] Could not read exclude file: {e}", file=sys.stderr)
 
     all_pmids = set()
 
@@ -262,9 +275,14 @@ def main():
             print(f"  Query {i + 1}: +{len(new)} new papers", file=sys.stderr)
         time.sleep(0.4)
 
-    print(f"[INFO] Total unique PMIDs: {len(all_pmids)}", file=sys.stderr)
+    print(
+        f"[INFO] Total unique PMIDs: {len(all_pmids)} (after exclusion: {len(pmid_list)})",
+        file=sys.stderr,
+    )
 
-    pmid_list = list(all_pmids)[: args.max_papers]
+    pmid_list = [p for p in list(all_pmids) if p not in exclude_pmids][
+        : args.max_papers
+    ]
 
     if not pmid_list:
         print("NO_CONTENT", file=sys.stderr)

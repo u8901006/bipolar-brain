@@ -48,13 +48,34 @@ jobs:
           fi
           echo "Date: $(cat $GITHUB_OUTPUT | grep target | cut -d= -f2)"
 
+      - name: Extract existing PMIDs from past 7 days
+        run: |
+          python -c "
+          import glob, re, json
+          from datetime import datetime, timedelta
+          pmids = set()
+          for i in range(1, 8):
+              d = (datetime.now() - timedelta(days=i)).strftime('%Y-%m-%d')
+              pattern = f'docs/bipolar-{d}.html'
+              files = glob.glob(pattern)
+              for f in files:
+                  with open(f, 'r', encoding='utf-8') as fh:
+                      html = fh.read()
+                  found = re.findall(r'pubmed\.ncbi\.nlm\.nih\.gov/(\d+)', html)
+                  pmids.update(found)
+          with open('existing_pmids.json', 'w') as fh:
+              json.dump(sorted(pmids), fh)
+          print(f'Found {len(pmids)} existing PMIDs from past 7 days')
+          "
+
       - name: Fetch papers from PubMed
         run: |
           python scripts/fetch_papers.py \
             --days 7 \
             --max-papers 50 \
             --json \
-            --output papers.json
+            --output papers.json \
+            --exclude existing_pmids.json
         continue-on-error: true
 
       - name: Check papers data
