@@ -275,14 +275,14 @@ def main():
             print(f"  Query {i + 1}: +{len(new)} new papers", file=sys.stderr)
         time.sleep(0.4)
 
+    pmid_list = [p for p in list(all_pmids) if p not in exclude_pmids][
+        : args.max_papers
+    ]
+
     print(
         f"[INFO] Total unique PMIDs: {len(all_pmids)} (after exclusion: {len(pmid_list)})",
         file=sys.stderr,
     )
-
-    pmid_list = [p for p in list(all_pmids) if p not in exclude_pmids][
-        : args.max_papers
-    ]
 
     if not pmid_list:
         print("NO_CONTENT", file=sys.stderr)
