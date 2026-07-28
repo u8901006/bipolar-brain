@@ -5,7 +5,7 @@
 ## 架構
 
 - **PubMed E-utilities API** → 抓取最新雙相情緒障礙症相關文獻
-- **Zhipu GLM-5.1** → 繁體中文摘要、PICO 分析、臨床實用性評估
+- **NVIDIA Nemotron** → 繁體中文摘要、PICO 分析、臨床實用性評估
 - **GitHub Actions** → 每日台北時間 11:00 自動執行
 - **GitHub Pages** → 自動部署 HTML 報告
 

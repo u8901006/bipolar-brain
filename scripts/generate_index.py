@@ -58,7 +58,7 @@ index = f"""<!DOCTYPE html>
   <p class="count">共 {total} 期日報</p>
   <ul>{links}</ul>
   <footer>
-    <p>Powered by PubMed + Zhipu AI · <a href="https://github.com/u8901006/bipolar-brain">GitHub</a></p>
+    <p>Powered by PubMed + NVIDIA Nemotron · <a href="https://github.com/u8901006/bipolar-brain">GitHub</a></p>
     <p style="margin-top:8px"><a href="https://www.leepsyclinic.com/" target="_blank">🏥 李政洋身心診所</a> · <a href="https://blog.leepsyclinic.com/" target="_blank">📬 訂閱電子報</a></p>
   </footer>
 </div>
