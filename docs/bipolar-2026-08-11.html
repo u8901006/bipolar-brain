@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年8月11日</title>
+<meta name="description" content="2026年8月11日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月11日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦雙相情緒障礙的認知功能、情緒調節機制及治療新策略，特別是在道德情緒處理、家庭焦點治療和躁症相關衝動行為的神經生物學基礎方面有重要進展，整體趨勢側重於精準醫療與非藥物介入的結合應用。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>道德情緒處理在緩解期雙相情緒障礙中的網路分析：結構與功能的關聯</h3>
+          <p class="journal-source">European archives of psychiatry and clinical neuroscience &middot; Moral emotion processing in euthymic bipolar disorder: insights from network analysis.</p>
+          <p>BD-I 患者在辨識道德相關面部表情（怒、惡）方面顯著遜於 BD-II 與對照組，且此缺損與額葉-邊緣系統結構關聯性改變相伴，提示社會認知功能障礙的神經生物學基礎。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">48 名緩解期雙相情緒障礙成人（BD-I 20 例，BD-II 28 例）及 45 名健康對照</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">電腦化面部情緒辨識任務結合 3T T1 加權 MRI</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">BD-I vs BD-II vs 健康對照</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">BD-I 在道德情緒辨識效率顯著下降，網路分析顯示前額葉區域（上額前迴）中心性增加，提示代償性結構重組</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42570035/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">👨‍👩‍👧‍👦</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>衝動與 ADHD 之關聯中情緒症狀的中介作用：青少年樣本證據</h3>
+          <p class="journal-source">Australasian psychiatry : bulletin of Royal Australian and New Zealand College of Psychiatrists &middot; Mood symptoms as mediators of the impulsivity-ADHD link in adolescents.</p>
+          <p>在青少年中，躁鬱/輕躁鬱症狀部分中介了衝動特質與 ADHD 嚴重程度之間的關係，提示情緒症狀可能掩飾或誘導 ADHD 診斷。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">62 名 ADHD 青少年及 110 名對照（年齡 12-18 歲）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自我報告衝動量表（BIS）、家長報告情緒問卷（MDQ）及 ADHD 評量表（CASS-S）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">ADHD 群 vs 對照群</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">MDQ 分數顯著中介了非規劃、運動、注意及總衝動分數與 ADHD 嚴重程度的關係（p ≤ .01），為部分中介</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42563432/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>家庭焦點治療在預防高危險青少年情感精神病發作中的預防效果：多基因分數研究</h3>
+          <p class="journal-source">European child & adolescent psychiatry &middot; Polygenic profiles in youth with early-onset psychosis and offspring of schizophrenia or bipolar disorder patients.</p>
+          <p>雙相情緒障礙患者的子女顯著較高的 ADHD 多基因分數，且非情感性早期精神病青少年認知與教育達成度 PGS 較低，提示遺傳風險的分層表現與早期介入的潛在目標。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">414 名青少年：69 例非情感性早期精神病，62 例情感性早期精神病（雙相或憂鬱伴精神病症狀），52 例 schizophrenic 父母後代，94 例 bipolar 父母後代，117 名健康對照</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">使用 PRS-CS 計算精神病診斷、認知、教育達成度及 ADHD 的多基因分數（PGS）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">各群組間的 PGS 差異（以健康對照為基準）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">精神病與雙相 PGS 在非情感性早期精神病及 schizophrenic 後代中升高；ADHD PGS 在非情感性早期精神病及 bipolar 後代中升高；認知與教育 PGS 在非情感性早期精神病群顯著降低（pfdr<0.05）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">基因學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42573752/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🧲</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>家庭式低磁場磁刺激作為雙相憂鬱輔助療法的隨機雙盲研究：主觀獲益但客觀陰性</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Home-based low-field magnetic stimulation as an adjunctive treatment for bipolar depression: A randomized double-blind study.</p>
+          <p>雖然 LFMS 未顯著改善臨床評分（HAMD-17），但顯著改善自我報告憂鬱（QIDS-SR16），提示主觀症狀緩解可能與客觀評量脫節，強調納入主觀端點的重要性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">60 名 ICD-10 定義之雙相憂鬱患者（當前憂鬱發作），穩定使用鋰劑</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">主動 LFMS（每日兩次，共 28 次，2 週） vs 假象刺激，使用晶片卡雙盲設備</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">主動 LFMS vs 假象</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">HAMD-17 無顯著差異（Week 6: Δ -0.27, p=0.74）；QIDS-SR16 在第 4 週（Δ1.79, p=0.032）及第 6 週（Δ1.83, p=0.020）顯著改善；無嚴重不良反應</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">躁症發作</span><span class="tag">物理治療與運動</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42203049/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">⚖️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>西班牙雙相情緒障礙患者刑事責任能力司法分析：治療缺失與社會孤立為關鍵風險</h3>
+          <p class="journal-source">International journal of law and psychiatry &middot; Criminal liability and Bipolar Disorder in Spain: A systematic analysis of 182 judicial sentences (2019-2024).</p>
+          <p>在西班牙司法個案中，雙相患者刑事責任免責率極低（3.3%），絕大多數未接受藥物治療或精神科追蹤，提示社會支持缺失與治療依從性不良是司法介入的主因。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">2019-2024 年間西班牙涉躁症狀相關刑事案件被告（N=182）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">回顧性司法文件分析（ sociodemographic、臨床、司法變數）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無（敘述性分析）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">81.9% 男性；76.9% 缺乏家庭支持；61.5% 未接受藥物治療；64.3% 無精神科追蹤；僅 3.3% 被認定為完全免責；最常見結果為上訴駁回（37.4%）與監禁（28.6%）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">刑事責任</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42296714/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👨‍👩‍👧‍👦</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>躁鬱/輕躁鬱症狀在青少年衝動與 ADHD 關聯中的部分中介作用</h3>
+          <p class="journal-source">Australasian psychiatry : bulletin of Royal Australian and New Zealand College of Psychiatrists</p>
+          <p>躁鬱/輕躁鬱症狀部分解釋了衝動特質與 ADHD 嚴重程度之間的關係，提醒 clinicians 在評估 ADHD 時必須篩選雙相譜系症狀以避免診斷遮蔽。</p>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42563432/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>雙相情緒障礙患者道德情緒辨識缺損與前額葉網路重組相關</h3>
+          <p class="journal-source">European archives of psychiatry and clinical neuroscience</p>
+          <p>BD-I 患者在辨識怒、惡等道德情緒面部表現上表現較差，且此缺損與額葉-邊緣系統結構連接性改變相關，提示社會認知功能障礙的神經基礎。</p>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42570035/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧲</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>家庭式低磁場磁刺激作為雙相憂鬱輔助療法：安全可行但僅改善主觀症狀</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>LFMS 未改善臨床評分（HAMD-17）但顯著改善自我報告憂鬱（QIDS-SR16），提示可能具安慰劑或主觀緩解效應，適合作為低風險補充選項。</p>
+          <div class="card-footer">
+            <span class="tag">躁症發作</span><span class="tag">物理治療與運動</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42203049/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚖️</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>西班牙雙相患者刑事案件分析：治療缺失是司法介入的主因</h3>
+          <p class="journal-source">International journal of law and psychiatry</p>
+          <p>西班牙司法個案顯示雙相患者刑事免責率極低（3.3%），超過六成未接受藥物治療或精神科追蹤，提示社會支持與治療依從性不良是司法風險的關鍵驅動因素。</p>
+          <div class="card-footer">
+            <span class="tag">刑事責任</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42296714/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧬</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>雙相高危險後代的多基因特徵：ADHD 傾向與認知風險並存</h3>
+          <p class="journal-source">European child & adolescent psychiatry</p>
+          <p>雙相患者子女顯著升高的 ADHD 多基因分數，以及非情感性早期精神病群體認知與教育 PGS 降低，提示遺傳風險具有分層表現，早期篩選具潛在預防價值。</p>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">基因學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42573752/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">躁症治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">藥物遵從性</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">刑事責任</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">雙相情緒障礙</span><span class="keyword">道德情緒</span><span class="keyword">家庭焦點治療</span><span class="keyword">躁症衝動</span><span class="keyword">多基因分數</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
