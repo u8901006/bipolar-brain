@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年8月21日</title>
+<meta name="description" content="2026年8月21日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月21日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙的預測生物標記（特別是穿戴式裝置與昏夜節律）、神經血管關聯性（血壓與腦血流）、以及藥物治療效果比較（如氟哌啶醇與SSRIs在肥胖合併憂鬱中的效能），顯示預防醫學與個人化治療為主流趨勢。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">⌚</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>穿戴式裝置導出的昏夜節律生物標記可預測一週後憂鬱發作：多中心深度學習研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Week-ahead prediction of depressive episodes using wearable-derived circadian biomarkers: A multicenter deep learning study with risk-based operating thresholds.</p>
+          <p>結合心率與睡眠時機的雙重昏夜節律標記，以穿戴式數據預測一週後憂鬱發作，AUROC達0.772，高風險群可捕捉63.5%的發作天數，顯示其作為早期預警工具的潛力。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">情緒障礙患者（N=144，含雙相及重度憂鬱），平均監測90,281人日</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">使用單一穿戴式裝置導出心率峰時與睡眠時機（DLMO代理）作為雙重昏夜節律標記</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">以臨床驗證的憂鬱發作為依據進行預測效能評估（對照為無發作日）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">預測一週後憂鬱發作的AUROC為0.772；高風險20%患者日捕捉63.5%發作天數，PPV為16.7%（基準發病率5.3%）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">睡眠與晝夜節律</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42242428/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🩸</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>青少年雙相情緒障礙中較高血壓與較低腦血流的關聯：血壓升高可能加劇神經血管功能障礙</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Higher blood pressure is associated with lower cerebral blood flow in youth with bipolar disorder.</p>
+          <p>在13-20歲雙相青少年中，收縮與舒張血壓升顯著相關於前額葉、前 cingulate 與島葉區腦血流降低，此關聯在健康對照組中不存在，提示血壓可能為雙相青少年腦血管健康的可修正風險因子。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">13-20歲青少年（BD組n=76，健康對照組n=68）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">測量收縮壓（SBP）與舒張壓（DBP），並使用ASL-MRI取得腦血流（CBF）圖</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">BD組 vs 健康對照組，控制年齡與性別</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">在BD組中，DBP與SBP升高顯著相關於前 cingulate、前預葉及島葉等多腦區CBF降低；健康對照組無此關聯；血壓對CBF的負向影響在BD組中更顯著（特別在前極與額軌葉）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42617921/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>氟哌啶醇在肥胖合併重度憂鬱患者中的緩解率優於SSRIs：傾向評分匹配隊列研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Remission outcomes with bupropion versus selective serotonin reuptake inhibitor monotherapy in major depressive disorder with comorbid obesity: A propensity-matched cohort analysis.</p>
+          <p>在肥胖合併重度憂鬱患者中，氟哌啶醇單療法緩解率為8.5%，優於SSRIs的7.9%（絕對風險差0.6%，RR 1.07），提示Noradrenaline/dopamine作用機制在此亞群中可能更有效。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">無既往抗抑鬱藥使用史的成人重度憂鬱併肥胖患者（來自TriNetX全球資料庫，各組n=165,629）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">氟哌啶醇單獨使用</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">SSRI類單獨使用（如氟西汀、舍曲林等）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">氟哌啶醇組MDD緩解率8.5% vs SSRI組7.9%，風險比1.07（95%CI：1.05-1.10，p<0.0001），絕對風險增加0.6%</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42624215/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>藥物治療導致的情緒處理恢復於四種精神疾病中呈現共通腦網路：雙側島葉與殼核為核心</h3>
+          <p class="journal-source">Biological psychiatry &middot; A Common Network of Emotional Processing Recovery Across Four Psychiatric Disorders.</p>
+          <p>橫跨MDD、BD、焦慮與物質使用障礙的23項藥物治療研究顯示，情緒處理改善與雙側島葉及殼核功能連通性增強密切相關，此網路可預測治療後情緒改善，提供跨診斷治療標的。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">213位接受藥物治療前後fMRI評估的精神疾病患者（MDD、BD、焦慮、物質使用）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">藥物治療（SSRIs、 SNRIs、抗精神病藥等）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">治療前 vs 治療後腦激活與連通性變化</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">208個激活點整合為一個共通網路，以雙側島葉與殼核為核心；治療後此網路內功能連通性增強預測情緒改善機率高；該網路對藥物治療有效，但對心理治療無效</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">功能復原</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41690355/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">👨‍👩‍👧‍👦</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>家庭支持經由減少孤獨感顯著降低黑人中年群體的心理困擾與憂鬱風險：結構方程模型縱向研究</h3>
+          <p class="journal-source">Journal of psychiatric research &middot; Family support is important for mitigating the mental health consequences of loneliness among Black Americans at midlife: Results from a longitudinal mediation analysis.</p>
+          <p>在黑人中年族群中，家庭支持透過降低孤獨感（間接效應）並直接降低憂鬱風險（aOR=0.301），對心理困擾具有顯著保護作用，強調社會支持在精神健康中的關鍵調節角色。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">黑人中年成人（N=592，來自MIDUS研究，2005-2006至2016-2017）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">來自家庭的支持感（以問卷測量）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低 vs 高家庭支持群組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">家庭支持總效應顯著降低心理困擾（β=-2.477）與憂鬱（aOR=0.208)，主要經由降低孤獨感介導（心理困擾：β=-1.244；憂鬱：aOR=0.538），並具有直接保護憂鬱的效應（aOR=0.301）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">家庭焦點治療</span><span class="tag">自殺防治</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42623964/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔬</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>神經胰島素相關基因與線粒體功能在腦特定區域中的關聯：SST表達調節多個線粒體基因</h3>
+          <p class="journal-source">Behavioural brain research</p>
+          <p>在腦銀屑資料中，SST表達與BCL2、MFN2、SOD2等線粒體關聯基因在海馬、前前葉及紋翅體中呈區域特異性關聯，提示SST可能經由調節線粒體功能影響情緒與精神健康。</p>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42617977/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧲</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>家庭式低磁場刺激作為雙相憂鬱的輔助治療：雙盲隨機對照試驗顯示主觀改善但無客觀效應</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>雙相憂鬱患者使用家庭式低磁場刺激（LFMS）6週後， clinician-rated 抑鬱評分無顯著改善，但自報QIDS-SR16顯著下降，提示可能具有主觀症狀緩解潛力，但需進一步優化參數。</p>
+          <div class="card-footer">
+            <span class="tag">心理治療</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42203049/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>資料多樣性勝過模型複雜度：在兒少雙相預測中，混合訓練資料提升泛化能力勝於堆疊複雜演算法</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>在兒少雙相預測中，單一資料集訓練的複雜模型（如DL、RF）在外部資料集表現落差大，而池併異質資料訓練的簡單模型（如logistic regression）在持out樣本上校準與辨識力更佳，提示資料代表性比演算法複雜度更關鍵。</p>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">機器學習</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42600789/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>肥胖合併憂鬱患者使用司美格魯肽認知症狀較少：藥物可能具有神經保護潛力</h3>
+          <p class="journal-source">BMJ mental health</p>
+          <p>在具有精神診斷的成人中，司美格魯肽使用者在12個月內認知症狀複合得分顯著低於未治療組（MR=0.75），在雙相亞群中亦見類似趨勢，提示GLP-1激動劑可能具備改善精神疾病相關認知功能的潛力。</p>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42624612/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👨‍👩‍👧‍👦</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>黑人中年群體家庭支持減少孤獨感因而降低憂鬱與心理困擾：結構方程模型驗證其mediating路徑</h3>
+          <p class="journal-source">Journal of psychiatric research</p>
+          <p>家庭支持顯著降低黑人中年個體的心理困擾與憂鬱，其效應約50%經由減少孤獨感介導，餘下具有直接保護作用，強調社會介入在精神健康預防中的價值。</p>
+          <div class="card-footer">
+            <span class="tag">家庭焦點治療</span><span class="tag">自殺防治</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42623964/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">躁症治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠與晝夜節律</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">家庭焦點治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">藥物治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">生物標記</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">穿戴式偵測</span><span class="keyword">昏夜節律</span><span class="keyword">腦血流</span><span class="keyword">氟哌啶醇</span><span class="keyword">家庭支持</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
