@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年8月30日</title>
+<meta name="description" content="2026年8月30日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月30日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙患者對 AI 聊天機器人的信任轉變與低劑量鋰鹽在預防痴呆方面的潛在益處，顯示數位健康與神經保護策略在雙相照護中的新興趨勢。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🤖</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>AI 聊天機器人在雙相情緒障礙患者中的信任轉變：角色模糊與臨床風險</h3>
+          <p class="journal-source">Bipolar disorders &middot; A Shift in Trust: An Analysis of the Use of AI Chatbots Among People Living With Bipolar Disorder.</p>
+          <p>研究發現雙相患者使用 ChatGPT 進行自我反思與心理支持時，可能將信任從精神健康專業人員轉移至 AI，導致角色模糊、過度依賴與對臨床照護的信任降低，提示需謹慎整合 AI 於精神科服務。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">兩位被診斷為雙相情緒障礙的個體</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">使用商業可得 AI 聊天機器人（ChatGPT）進行自我反思、診斷探索、症狀管理與治療支援</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照組（質性探索性研究）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">參與者報告 AI 提供無評判性支持與安慰，但同時出現對專業照護信任減少、過度依賴及缺乏對 AI 局限性認識的風險</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">AI 聊天機器人</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42657654/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>低劑量鋰鹽與 valproate 比較：對老年人痴呆發生率的保護效應</h3>
+          <p class="journal-source">Psychiatry research &middot; Low-dose lithium vs valproate and incident dementia diagnoses in older adults: A propensity-matched cohort study using electronic health record data.</p>
+          <p>在老年人群中，低劑量鋰鹽（≤0.40 mmol/L）使用者相比 valproate 使用者，痴呆發生率顯著降低 62%（HR=0.38），提示鋰鹽可能具神經保護作用，即使在非雙相族群中也值得關注。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">60 歲以上、無既往認知障礙或神經退化性疾病的成人（n=1706）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">低劑量鋰鹽（所有血清鋰 ≤0.40 mmol/L）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">丙戊酸鈉（valproate）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">鋰鹽組痴呆發生率為 3.1%， valproate 組為 8.3%，鋰鹽組風險降低 62%（HR 0.38, 95% CI 0.24–0.60）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42372694/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙的神經科學圖像說明：從病理機制到個別化治療的進展</h3>
+          <p class="journal-source">Asian journal of psychiatry &middot; Neuroscience in pictures: Bipolar disorder.</p>
+          <p>此圖像式綜述整合了雙相情緒障礙的遺傳、神經發育、神經迴路功能失調（前額-邊緣系統、獎賞、認知控制）、神經發炎、神經內分泌失調及昏夜節律 disruption，強調早期干預與多模式治療的重要性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">首次出現伴有精神病特徵躁症的年輕個體（個案說明）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無具體介入（機制與病理圖像綜述）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">闡明雙相的生物學異質性與可塑性，支持早期干預、藥物依從性及以昏夜節律為基礎的個人化治療策略</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542118/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>親友為一級親屬的雙相或精神病患者：白質微結構異常僅見於患者本人，非家族風險所致</h3>
+          <p class="journal-source">Molecular psychiatry &middot; White matter microstructure in relatives of people with schizophrenia or bipolar disorder: an ENIGMA meta-analysis.</p>
+          <p>雙相患者的一級親屬（FDR-BD）在後 limb 內囊顯示較高 FA（提示代償性適應），而患者本人則顯示預期的低 FA，支持白質異常為疾病本身結果，而非遺傳風險標誌。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">408 名雙相患者的一級親屬（FDR-BD）、542 名精神病患者親屬、841 名對照群</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無介入（觀察性影像研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照群（無精神病家族史健康者）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">FDR-BD 在後 limb 內囊顯示較高 FA（p 未顯著提及但經 meta-analysis 整合）；BD/SZ 患者顯示多條白質束 FA 降低；創傷與工作記憶與白質關聯僅在 FDR-SZ 中顯現</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">基因學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42168580/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📏</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙患者的功能評估尺度開發：基於 ICF 框架的多維度工具</h3>
+          <p class="journal-source">Journal of affective disorders &middot; The Functioning Assessment Scale for Mental Health: Development and validation.</p>
+          <p>新發布的 FAS-MH 尺度涵蓋身體功能、活動與參與、環境因素三個域，經驗證具有優秀內部一致性（α=0.85–0.95），適用於雙相、抑鬱及精神分裂症患者的功能狀態評估。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">334 名被診斷為雙相情緒障礙、抑鬱或精神分裂症的成人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">FAS-MH 尺度（37 項目，涵蓋 34 個 ICF 第二層級類別）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照組（驗證性研究）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">尺度顯示優秀內部一致性（Cronbach’s α 0.85–0.95, omega 0.90–0.96），與既有殘疾、健康狀態及生活品質測量具中等至強相關</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">功能復原</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42167693/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚠️</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>網絡分析揭示：無價值感而非內疚是導致自殺行為的關鍵橋樑症狀</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>發現隨訪時的「無價值感」是連接憂鬱症狀與未來自殺企圖的最強橋樑症狀，其預測力遠超內疚，提示治療應聚焦於自我價值重建而非罪責減緩。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42648553/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">😴</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>青少年情緒障礙中失眠多基因風險得分與躁狂嚴重程度相關，尤其在女生中顯著</h3>
+          <p class="journal-source">Journal of child and adolescent psychopharmacology</p>
+          <p>情緒障礙青少年失眠 PRS 高於對照組，並與躁狂嚴重程度顯著相關（尤其女生），支持睡眠失調為雙相情緒波動的可修飾風險因子。</p>
+          <div class="card-footer">
+            <span class="tag">睡眠與晝夜節律</span><span class="tag">兒少雙相</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42267832/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🥘</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>傳統中醫飲食推薦系統 ShenNongDiet：結合知識圖譜與 AI 生成提升精準度與安全性</h3>
+          <p class="journal-source">Chinese medicine</p>
+          <p>新系統結合中醫知識圖譜與檢索增強生成（RAG）技術，達成 84% Hit@1 準確率，有效降低不適合食材組合風險，為個人化中醫飲食提供科技支援。</p>
+          <div class="card-footer">
+            <span class="tag">中醫與針灸</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42649519/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💻</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>大學生使用生成式 AI 的四種潛在類別：問題依賴型使用者憂慮與焦慮最高</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>將大學生 AI 使用分為四類，問題依賴型（逃避動機高、識讀低、依賴度高）顯著關聯較高憂鬱焦慮，提示需從動機與識讀入手進行預防。</p>
+          <div class="card-footer">
+            <span class="tag">AI 聊天機器人</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42660392/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚡</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>經顱直流電刺激 (tDCS) 在抑制控制任務中無顯著效果：高密度與傳統蒙太奇皆未優於 sham</h3>
+          <p class="journal-source">Cortex; a journal devoted to the study of the nervous system and behavior</p>
+          <p>無論是高密度或傳統雙極 tDCS，在止訊號任務中對反應抑制均未顯著優於 sham，提示 tDCS 在認知增強領域效果變異大，需謹慎解釋正向結果。</p>
+          <div class="card-footer">
+            <span class="tag">認知行為治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42275807/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">躁症治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鋰鹽治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">AI 聊天機器人</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自殺防治</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠與晝夜節律</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">功能復原</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">中醫與針灸</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">雙相情緒障礙</span><span class="keyword">鋰鹽治療</span><span class="keyword">AI 聊天機器人</span><span class="keyword">認知功能</span><span class="keyword">自殺防治</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
