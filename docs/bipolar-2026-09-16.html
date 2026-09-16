@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年9月16日</title>
+<meta name="description" content="2026年9月16日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年9月16日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙的神經機制與心理社會介入，強調腦區功能（如IPL）、遺傳風險與認知偏差的交互作用，以及心理治療在戰後創傷及產期人群中的可行性，顯示正朝向整合生物、心理與社會層面的精準醫療發展。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>下顳葉小葉在雙相情緒障礙情緒失調中的作用：一篇文獻綜述</h3>
+          <p class="journal-source">Neuroscience and biobehavioral reviews &middot; The role of inferior parietal lobule in emotion dysregulation in bipolar disorder.</p>
+          <p>綜述指出下顳葉小結構與功能異常是雙相情緒障礙情緒失調的關鍵神經基礎，涉及注意分配、認知改變與反應調節等過程，為開發精準神經介入提供理論依據。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（文獻綜述）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">健康對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">情緒調節神經機制與IPL結構/功能異常的關聯</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">情緒穩定劑</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42716328/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>抑鬱狀態與遺傳風險對情緒詞處理的影響：基於大型隊列的縱向研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Effects of depression status and genetic risk on emotional word processing in a large cohort.</p>
+          <p>研究發現抑鬱症狀與更負面的情緒詞評價相關，而MDD多基因風險評分獨立預測更負面的情緒唤醒度，提示遺傳易感性可能透過認知偏差增加雙相憂鬱易感性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">1392名具急性抑鬱Episodes住院史的德國隊列參與者（BiDirect Study）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無抑鬱狀態 vs 抑鬱狀態；低 vs 高MDD-PRS</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">情緒詞的效價與喚醒度主觀評分</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">基因學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42744145/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">💬</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>模組化賦能團體療法在烏克蘭戰爭中成年門診患者中的可行性與接受度：一項試點研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Feasibility and acceptability of modular empowerment group therapy in Ukrainian adult outpatients: A pilot study.</p>
+          <p>在戰爭背景下，經文化適應的賦能團體療法（面對面及線上）展現高可行性（留存率96.4%）與接受度，並顯著改善抑鬱、創傷後應激、身體症狀及生活品質，面對面組效果更佳。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">56名烏克蘭成年門診出身患者（含戰爭創傷相關壓力）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">文化適應的模組化賦能團體療法（面對面或線上）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照（單組試點）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">保留率、 dropout率、 CSQ-4滿意度、 PHQ-9、 PCL-5、 SSS-8、 SF-36、 BRS</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">心理治療</span><span class="tag">產期雙相</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42731584/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">👪</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>恥感如何影響重度精神疾病照護者的心理困擾：社會網路、支持與隔離的中介路徑</h3>
+          <p class="journal-source">Journal of psychiatric and mental health nursing &middot; When Stigma Strikes, Who Bears the Weight? Social Pathways to Psychological Distress in Carers of People With Severe Mental Illness: A Cross-Sectional Study.</p>
+          <p>研究證明 perceived stigma 透過削弱社會網路、減少社會支持及增加社會隔離三條路徑，顯著增加重度精神疾病（含雙相）照護者的心理困擾，凸显社會介入的重要性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">328名中國湖南省重度精神疾病患者的主要照護者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷面調查）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低 vs 高 perceived stigma 組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">心理困擾（Kessler 10 Scale）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">家庭焦點治療</span><span class="tag">自殺防治</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42734318/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🤰</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>基於可解釋隨機森林模型的產期抑鬱症狀軌跡風險分層：一項前瞻性隊列研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Trajectory-driven risk stratification of perinatal depressive symptoms based on an interpretable random forest model: a prospective cohort study.</p>
+          <p>研究識別出五種產期抑鬱症狀軌跡，其中「慢性輕度」佔比最高（54.0%），人格脆弱與反芻思維是預後不良軌跡（如持續或惡化）的最強預測因子，支持早期篩檢與個別化介入。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">2303名中國產期婦女（第二孕期至產後42天）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性追蹤）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同症狀軌跡群組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">產期抑鬱症狀軌跡分類（GBTM）及隨機森林預測模型（AUC=0.72）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">產期雙相</span><span class="tag">復發預防</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42735780/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>休閒magnetoencephalography在重度精神疾病中的改變：系統性文獻回顧</h3>
+          <p class="journal-source">Neuroscience and biobehavioral reviews</p>
+          <p>發現Beta波動力可能是跨診斷的生物標誌，雙相情緒障礙在神經複雜度與老化關係上呈神經退化軌跡，慢波活動則與情感失調相關，提供 stratify 病灶嚴重度的潛力。</p>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42471042/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💬</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>人際情緒調節與青少年情緒適應的方向性關聯：策略特定效應分析</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>人際情緒調節與生活滿意度正相關，與抑鬱症狀負相關僅在間人水平顯著；在個人水平上，抑鬱症狀增加會減少後續安慰策略的使用，提示情緒症狀可能破壞調節資源。</p>
+          <div class="card-footer">
+            <span class="tag">心理治療</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42732832/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🤖</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>人工智慧聊天機器人對心理健康的影響：系統性文獻回顧與三層級meta分析</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>AI聊天機器人介入於抑鬱、焦慮等多個領域顯示小到中等效應（g=0.47），但證avour度低，效應可能來自整合套裝而非純技術，需更嚴謹試驗驗證其獨立貢獻。</p>
+          <div class="card-footer">
+            <span class="tag">心理治療</span><span class="tag">數位療癒</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42743601/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🕶️</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>虛擬實境評估病理與健康焦慮反應之差異：遠端範式的初步驗證</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>遠端VR範式可誘發焦慮反應，但焦慮患者顯示生理反應（HRV/HR）鈍化，提示自主神經靈活度受限，可能為焦慮疾病的生物標誌，而非特定於雙相。</p>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42744147/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔬</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>子宮內膜腺症囊性病灶的 hystero超聲逐步管理方法：從定位到預防粘連</h3>
+          <p class="journal-source">Facts, views & vision in ObGyn</p>
+          <p>結合宮腔鏡與經陰道超聲，使用雙極器械及透明質酸屏障，可微創切除囊性腺肌症病灶，改善不孕患者的宮腔環境，但與雙相情緒障礙無直接關聯。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42740633/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">心理治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">產期雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">雙相憂鬱</span><span class="keyword">神經影像</span><span class="keyword">心理治療</span><span class="keyword">產期雙相</span><span class="keyword">基因學</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
