@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年10月7日</title>
+<meta name="description" content="2026年10月7日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年10月7日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙的生物標記與神經影像研究，特別是血壓與腦血流、早期代謝變化及認知功能的關聯，顯示對身心整合性機制的關注日益增加。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>較高血壓與青少年雙相情緒障礙患者較低腦血流相關</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Higher blood pressure is associated with lower cerebral blood flow in youth with bipolar disorder.</p>
+          <p>發現青少年雙相情緒障礙患者收縮與舒張血壓升高與前額葉及多腦區腦血流降低顯著相關，提示血壓可能為影響神經血管健康的可干預因素。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">13-20歲青少年（76名雙相情緒障礙患者，68名健康對照）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">測量收縮壓（SBP）與舒張壓（DBP）及使用 arterial spin labeling (ASL) MRI 評估腦血流（CBF）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">雙相情緒障礙組 vs 健康對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">在雙相情緒障礙組中，較高 DBP 與 SBP 均與前額葉、前扣帶皮質、島葉等多區腦血流降低相關；此關聯在對照組中不存在，且雙相組的前額葉區域血壓-腦流關係顯著更強</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">血壓與腦血流</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42617921/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">⚖️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>急性躁狂期抗精神病藥 combined with 鋰治療早期代謝與腸道菌群變化</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Early metabolic and gut microbiota alterations during antipsychotic‑lithium treatment in acute bipolar mania: A prospective follow-up study.</p>
+          <p>不同抗精神病藥 combined with 鋰治療12週後，奧氮平+鋰組代謝惡化最明顯（體重、BMI、血脂升高），而阿立哌唑+鋰組變化最小；腸道多樣性普遍增加，提示早期代謝風險之藥物差異。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">急性躁狂episode且基礎未用藥的雙相情緒障礙住院患者（n=80）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">四組：奧氮平+鋰、利培酮+鋰、阿立哌唑+鋰、單獨鋰治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">四組在12週內之代謝指標（體重、BMI、腰圍、血糖、血脂）與糞便菌群變化</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">奧氮平+鋰組代謝不良變化最劇烈（所有P<0.001）；阿立哌唑+鋰組及單獨鋰組變化最小；所有組在12週腸道α多樣性（Shannon、Simpson）顯著增加</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">代謝副作用</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42604694/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🏃</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>規律運動對雙相情緒障礙患者認知功能的正向影響：跨橫斷面分析</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Cognitive performance and self-reported physical exercise in bipolar disorder: A cross-sectional analysis of pre-randomization screening data from an ongoing randomized controlled trial.</p>
+          <p>規律運動（每週≥2次）的情緒穩定期雙相患者在總認知分數、工作記憶與言語學習上顯著優於不運動組，效應值大（d=0.95），且工作記憶效應在多重比較後仍顯著。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">18-55歲情緒穩定期雙相情緒障礙患者（n=108）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自報規律結構化運動 ≥2次/週（運動組 n=48）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未規律運動組 (n=60)</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">運動組 SCIP 總分顯著高於未運動組 (64.63 vs 56.50, p<0.001, d=0.95)；工作記憶與言語學習顯著改善，其中工作記憶在Bonferroni校正後仍�著</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">物理治療與運動</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42838229/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🩺</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>透過結構化臨床訪談辨識雙相情緒障礙與極性抑鬱的關鍵特徵：系統性文獻回顧</h3>
+          <p class="journal-source">The European journal of general practice &middot; Distinguishing bipolar disorder from unipolar depression in general practice: A systematic review.</p>
+          <p>早發年齡、反覆發作、家族史、週循氣質、自殺行為、產後抑鬱、精神病症狀及混合發作是區分雙相與極性抑鬱最一致的臨床特徵，單獨無力但組合使用可提升初診偵測。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">一般醫師就診之抑鬱episode患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">透過結構化臨床訪談評估特定病史與臨床特徵</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">有 vs 無上述特徵之患者</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">早發年齡、反覆發作、雙相家族史、週循氣質、自殺未遂、產後抑鬱、精神病症狀、混合發作為最一致區分特徵；組合使用可提升疑似雙相之臨床懷疑</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">診斷鑑別</span><span class="tag">一般醫師</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42758600/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">💪</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>監督性運動介入對抗精神病藥物療效之系統評析與 meta-analysis：改善陰性症狀與減輕代謝傷害</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Exercise to enhance antipsychotic effectiveness and mitigate metabolic harm: systematic review and meta-analysis.</p>
+          <p>監督性運動顯著改善陰性症狀（MD -3.08）、總精神病理及PANSS總分，並減少體重、體脂百分比與腰圍，但在血壓、血糖及血脂上效果有限，證據確定度中等。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">接受抗精神病藥物治療的成人（n=1119，來自28項RCT）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">監督性運動介入</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組（無運動或常規照護）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">運動組陰性症狀顯著改善（p<0.001）、體重減少（p=0.034）、體脂率下降（p=0.020）、腰圍變細（p=0.032）；陽性症狀、收縮壓、舒張壓、空腹血糖無顯著變化</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">精神病症狀</span><span class="tag">代謝副作用</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42838230/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>心率變異與前額葉腦電圖結合用於精神疾病風險分層：XGBoost分類與潛在類別分析</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>透過心率變異（TP、LF）與前額葉腦電圖（theta、low-alpha、low-beta、middle-beta）結合焦慮症狀，建構模型可區分健康對照與精神疾病群（準確率74.9%），並識別出三種亞型：過度警覺、相對穩定及前額葉放慢。</p>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42833406/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧫</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>抗精神病藥-lithium 治療急性躁狂早期腸道菌群與代謝變化之相關性：前瞻性隨訪研究</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>奧氮平+lithium 組在12週內代謝惡化最顯著（體重、BMI、血脂升高），而阿立哌唑+lithium 組變化最小；所有組腸道α多樣性顯著增加，提示早期選藥對代謝風險有影響。</p>
+          <div class="card-footer">
+            <span class="tag">代謝副作用</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42604694/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🫀</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>青少年雙相情緒障礙中血壓升高與皮質層萎縮之關聯：MRI研究</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>在雙相情緒障礙青少年中，收縮壓與舒張壓升高與前額葉、島葉及前扣帶皮質腦血流降低顯著相關，此關聯在健康對照組中不存在，提示血壓可能為神經血管病變之可修復風險因子。</p>
+          <div class="card-footer">
+            <span class="tag">血壓與腦血流</span><span class="tag">神經影像</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42617921/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>規律運動改善情緒穩定期雙相情緒障礙患者認知功能：工作記憶獲益最顯著</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>情緒穩定期雙相患者若自報規律運動≥2次/週，其認知總分、工作記憶及言語學習顯著優於不運動組，其中工作記憶改善效應量大（d=0.95）且經Bonferroni校正後仍顯著。</p>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">物理治療與運動</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42838229/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📋</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>初診中辨識雙相情緒障礙：以早發年齡、家族史與症狀特徵為基礎的系統性回顧</h3>
+          <p class="journal-source">The European journal of general practice</p>
+          <p>早發年齡、反覆發作、雙相家族史、週循氣質、自殺行為、產後抑鬱、精神病症狀及混合發作是區分雙相與極性抑鬱最一致的臨床特徵，單獨敏感度低但組合使用可顯著提升初診疑似雙相之臨床懷疑，適合結合工具如MDQ使用。</p>
+          <div class="card-footer">
+            <span class="tag">診斷鑑別</span><span class="tag">一般醫師</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42758600/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">代謝副作用</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">診斷鑑別</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">物理治療與運動</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">雙相情緒障礙</span><span class="keyword">血壓</span><span class="keyword">腦血流</span><span class="keyword">認知功能</span><span class="keyword">運動</span><span class="keyword">代謝副作用</span><span class="keyword">診斷鑑別</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
