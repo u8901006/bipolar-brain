@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年10月15日</title>
+<meta name="description" content="2026年10月15日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年10月15日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦雙相情緒障礙症的藥物安全性（尤其鋰鹽與新進藥物如GLP-1受體激動藥的相互作用）、早期診斷生物標記及長期治療反應預測，顯示出對個體化醫療與風險監控的關注日益增加。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">⚠️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙患者接受鋰鹽治療時啟用泰西帕肽後腎臟安全性與鋰鹽水準之12個月真實世界研究</h3>
+          <p class="journal-source">Human psychopharmacology &middot; Tirzepatide Initiation in Lithium-Treated Bipolar Disorder: Renal Biomarker Trajectories and Lithium Safety Signals Over 12 Months in a Real-World Cohort.</p>
+          <p>在雙相情緒障礙患者中，泰西帕肽與鋰鹽合併使用12個月後觀察到鋰鹽血濃度上升趨勢，雖未顯著影響腎功能指標，但提醒需嚴格監測鋰鹽毒性風險，尤其在顯著體重下降期間。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">接受鋰鹽治療的雙相情緒障礙成人患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">泰西帕肽（GIP/GLP-1受體激動藥）啟用治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">基線值（治療前）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">12週內鋰鹽濃度上升(+0.08 mmol/L)，12月體重下降17.7%，腎功能(eGFR)改善，但兩例鋰鹽中毒導致停藥</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42803597/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>鋰鹽與GLP-1類藥物在雙相情緒障礙中的藥物警戒新訊號：藥物相互作用與監控建議</h3>
+          <p class="journal-source">International clinical psychopharmacology &middot; Lithium and GLP-1-based therapies in bipolar disorder: an emerging pharmacovigilance signal and monitoring considerations.</p>
+          <p>自2025年起已有多個病例報告顯示GLP-1受體激動藥（如司美格鲁肽、泰西帕肽）啟用或劑量增加後可能導致鋰鹽中毒，歐藥局已針對此開立安全訊號，提醒需監測鋰鹽血濃度與腎功能。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙患者，正在使用鋰鹽治療</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">GLP-1受體激動藥或雙重GIP/GLP-1激動藥（如泰西帕肽、司美格鲁肽）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未使用GLP-1類藥物的鋰鹽治療組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">鋰鹽血濃度升高（毒性風險增加）， mechanisms 包括胃排空延遲影響吸收、體重減少後腸鋰鹽清降（但不足以解釋全部現象）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542974/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>台灣籍人士中SIRT1基因變異rs12415800與雙相情緒障礙風險之關聯：尤其在50歲以上族群更顯著</h3>
+          <p class="journal-source">BJPsych open &middot; Association of the major depressive disorder-associated locus rs12415800 with bipolar disorder in a Taiwan Biobank-NHIRD linked cohort.</p>
+          <p>台灣漢族大規模隊列研究發現，SIRT1基因變異rs12415800的A allele與雙相情緒障礙風險增加相關（aOR=1.20），尤其在≥50歲者中風險更高（aOR=1.38），暗示其可能參與老年發病機制。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">台灣漢族成人（N=145,780），經標準ICD碼診斷的雙相情緒障礙患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（遺傳關聯研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">GG基因型參考組 vs. AG/AA基因型</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">AA基因型者雙相情緒障礙風險顯著增加（aOR=1.20，95%CI 1.05-1.37），≥50歲者aOR=1.38</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">基因學</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42858466/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🧫</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙急性躁症患者接受不同抗精神病藥物併鋰鹽治療時之早期代謝與腸道菌群變化：前瞻性追蹤研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Early metabolic and gut microbiota alterations during antipsychotic‑lithium treatment in acute bipolar mania: A prospective follow-up study.</p>
+          <p>在急性躁症患者中，奧氮平+鋰鹽組代謝惡化最顯著（體重、血糖、血脂），利培隆+鋰鹽次之，而阿立哌唑+鋰鹽及單獨鋰鹽組變化最小；腸道菌群α多樣性在奧氮平組顯著增加，提示藥物類型對身心同步影響甚鉅。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">急性躁症且藥物洗淨的雙相情緒障礙住院患者（N=80，完成68例）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">四組：奧氮平+鋰鹽、利培隆+鋰鹽、阿立哌唑+鋰鹽、單獨鋰鹽</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">基線（T0） vs. 週4、8、12 (T4/T8/T12)</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">奧氮平+鋰鹽組代謝指標惡化最嚴重（p<0.001），利培隆組次之；阿立哌唑組代謝變化最小；奧氮平組腸道菌群多樣性增加</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">躁症發作</span><span class="tag">抗精神病藥物</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42604694/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📈</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>臨床症狀作為青少年和年輕成人重度憂鬱發作早期治療反應的預測因子：基線HAMD總分與思覺失調因子具預測值</h3>
+          <p class="journal-source">Bipolar disorders &middot; Clinical Symptomatology as Predictors of Early Treatment Response in Adolescents and Young Adults With Major Depressive Episode.</p>
+          <p>在13-25歲情緒障礙患者的重度憂鬱發作中，基線HAMD-17總分越高（OR=1.10）與思覺失調因子分數越低（BPRS思覺失調OR=0.79）預測兩週後治療反應較好，提助臨床早期決策。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">13-25歲住院患者，當前正經歷重度憂鬱發作（MDE，N=218）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">標準雙相相關治療（具體藥物未限定）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">基線臨床特徵 vs. 2週後HAMD-17減少率</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">基線HAMD總分（OR=1.10，p=0.045）與BPRS思覺失調因子（OR=0.79，p<0.001）為早期治療反應的獨立預測因子</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">兒少雙相</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42867159/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔍</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>區別極性憂鬱與雙相憂鬱的臨床指標：總膽紅素、肌酸激酶、血小板與甲狀腺素T4具辨識力</h3>
+          <p class="journal-source">Bipolar disorders</p>
+          <p>經變異與多變項分析識別出總膽紅素(TBIL)、肌酸激酶(CK)、血小板(PLT)與甲狀腺素T4為雙相憂鬱與極性憂鬱之潛在生物標記，組合模型AUC達0.724，具有初步臨床辨識價值。</p>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42867166/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧪</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>鋰鹽治療患者中腎素前激肽(copeptin)與尿濃縮能力預測腎功能惡化：長期隨訪研究證實其監控價值</h3>
+          <p class="journal-source">Nephrology, dialysis, transplantation : official publication of the European Dialysis and Transplant Association - European Renal Association</p>
+          <p>在長期服用鋰鹽的雙相情緒障礙患者中，基線尿濃縮能力下降及血漿copeptin升高與隨訪期間腎功能惡化顯著相關，支持其作為鋰鹽腎毒性早期警戒標記的潛力。</p>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42847926/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚠️</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>泰西帕肽在鋰鹽治療的雙相情緒障礙患者中之腎臟安全性與鋰鹽水準軌跡：12個月真實世界cohort研究</h3>
+          <p class="journal-source">Human psychopharmacology</p>
+          <p>重複條目（與top_picks第一名相同），僅保留一份在all_papers中以避免重複，實際內容同上。</p>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">藥物遵從性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42803597/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧫</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>躁症患者接受不同抗精神病藥物併鋰鹽時之代謝與腸道菌群早期變化：前瞻性追蹤研究</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>重複條目（與top_picks第四名相同），僅保留一份在all_papers中以避免重複，實際內容同上。</p>
+          <div class="card-footer">
+            <span class="tag">躁症發作</span><span class="tag">抗精神病藥物</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42604694/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧬</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>台灣Biobank研究：SIRT1基因變異rs12415800與雙相情緒障礙風險關聯，尤其在老年族群更顯著</h3>
+          <p class="journal-source">BJPsych open</p>
+          <p>重複條目（與top_picks第三名相同），僅保留一份在all_papers中以避免重複，實際內容同上。</p>
+          <div class="card-footer">
+            <span class="tag">基因學</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42858466/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">6</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">躁症發作</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鋰鹽治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:83%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">藥物遵從性</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">生物標記</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">2</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">鋰鹽治療</span><span class="keyword">GLP-1受體激動藥</span><span class="keyword">泰西帕肽</span><span class="keyword">代謝副作用</span><span class="keyword">腸道菌群</span><span class="keyword">早期治療反應</span><span class="keyword">生物標記</span><span class="keyword">基因風險</span><span class="keyword">藥物相互作用</span><span class="keyword">躁症治療</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
