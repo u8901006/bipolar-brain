@@ -14,8 +14,8 @@ from datetime import datetime, timezone, timedelta
 import httpx
 
 API_BASE = "https://integrate.api.nvidia.com/v1"
-MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b"
-FALLBACK_MODEL = "nvidia/nemotron-3-nano-30b-a3b"
+MODEL_NAME = "nvidia/nemotron-3-ultra-550b-a55b"
+FALLBACK_MODEL = "nvidia/nemotron-3-ultra-550b-a55b"
 
 SYSTEM_PROMPT = (
     "你是雙相情緒障礙症（Bipolar Disorder）領域的資深研究員與科學傳播者。你的任務是：\n"
@@ -159,7 +159,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
         "chat_template_kwargs": {"enable_thinking": False},
     }
 
-    models_to_try = [MODEL_NAME, FALLBACK_MODEL]
+    models_to_try = list(dict.fromkeys([MODEL_NAME, FALLBACK_MODEL]))
 
     for model in models_to_try:
         payload["model"] = model
