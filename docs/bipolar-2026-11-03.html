@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年11月3日</title>
+<meta name="description" content="2026年11月3日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月3日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻亮點在於雙相情緒障礙症治療新藥 Elunetirom 的藥動學數據與 Dimdazenil 治療雙相憂鬱合併失眠的臨床療效研究，同時有系統性文獻探討鋰鹽的疾病修飾潛力、認知重塑介入的長期功能效益，以及從患者視角定義輕躁狂早期預警信號，對臨床實踐具高參考價值。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>鋰鹽作為雙相情緒障礙症治療選擇的 2026 年觀點：疾病修飾藥物的定位與臨床應用落差</h3>
+          <p class="journal-source">Expert review of neurotherapeutics &middot; Perspectives on the use of lithium as a therapeutic option for bipolar disorder in 2026.</p>
+          <p>專家指出鋰鹽應被視為疾病修飾藥物（DMD）並建議早期使用以防止疾病進展，但臨床使用率極低（美國<20%），呼籲需透過教育與公共衛生策略改善此現狀。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙症患者（含早期病程）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">鋰鹽治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">其他情緒穩定劑或延遲使用鋰鹽</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">疾病修飾效應（神經保護、抗自殺、認知保護、延緩癡呆）、長期功能預後、使用率現況</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">復發預防</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42747205/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🧪</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>甲狀腺激素受體激動劑 Elunetirom（ABX-002）液體與固體口服製劑在健康受試者中的生物等效性研究</h3>
+          <p class="journal-source">Clinical and translational science &middot; Liquid Compared to Solid Oral Formulations of the Thyroid Hormone Receptor Agonist Elunetirom Under Fasted and Fed Conditions in Healthy Participants.</p>
+          <p>針對雙相憂鬱與重性憂鬱症開發的新藥 Elunetirom，其固體製劑在空腹狀態下與液體製劑具有生物等效性；進食增加母體藥物暴露量但不影響活性代謝物 LL-340001 總暴露量，耐受性良好。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康成人志工</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Elunetirom 45μg 固體口服製劑（空腹/餐後）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">Elunetirom 45μg 液體口服製劑（空腹）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">藥動學參數（AUC、Cmax、Tmax）、安全性與耐受性</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42951879/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">😴</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Dimdazenil 治療原發性失眠及合併失眠之憂鬱發作/雙相憂鬱發作：上市後隨機陽性對照研究</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Efficacy and safety of Dimdazenil in primary insomnia and depressive episodes/bipolar depressive episode with insomnia: A post-marketing, randomized, open-label, positive-controlled study.</p>
+          <p>Dimdazenil 2.5mg 顯著改善主觀總睡眠時間（較 Midazolam 多 7.36 分鐘）、睡眠潛伏期、失眠嚴重度指數，並改善日間功能（嗜睡、疲勞、注意力），不良事件多為輕微，對雙相憂鬱合併失眠患者有描述性改善趨勢。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">原發性失眠患者、合併失眠之憂鬱發作/雙相憂鬱發作患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Dimdazenil 2.5mg（每週至少 3 劑，14 天）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">Midazolam 15mg</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">主觀總睡眠時間（sTST）、睡眠潛伏期（sSL）、失眠嚴重度指數（ISI）、日間功能（ESS、FFS、TMT-A）、安全性</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">雙相憂鬱</span><span class="tag">睡眠與晝夜節律</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42413624/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙症促認知介入的持續認知與功能效益：隨機對照試驗系統性回顧</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Sustained cognitive and functional effects of pro-cognitive interventions for bipolar disorder: A systematic review of randomised controlled trials.</p>
+          <p>僅 13% 的促認知 RCT 評估 3 個月後的長期效果；認知重塑（CR）在 3-6 個月隨訪中呈現持久認知獲益（3/4 研究），但功能改善證據僅見於 1 研究，認知獲益轉化為現實功能的證據仍不足。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙症成人患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">促認知介入（認知重塑為主）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組（待列/治療照常/安慰劑）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">治療結束 3-6 個月後的認知與心理社會功能結果</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">功能復原</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42607892/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📝</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>患者視角的輕躁狂早期預警信號：383 份危機計畫的質性分析</h3>
+          <p class="journal-source">Journal of affective disorders &middot; What can we learn from patients about early warning signs of (hypo)mania?</p>
+          <p>分析 383 位患者的 6510 個預警信號，歸納為 10 大類（情緒、思維過程、自我反思等），發現許多內在可覺察的信號（如多疑、時間感改變、感官過敏、控制慾增強）不在診斷標準中，且疾病早期洞察力會變化。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙症成人門診患者（專科診所）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">質性分析患者自撰危機計畫中的預警信號</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">DSM/ICD 診斷標準中的躁狂/輕躁狂症狀</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">早期預警信號的分類、內在可覺察與外顯差異、與診斷標準的重疊度</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">復發預防</span><span class="tag">輕躁症</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42951039/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💉</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>凱他命與艾司凱他命治療重性憂鬱與雙相情緒障礙症的認知效應：系統性回顧</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>納入 22 研究（N=2441），單次劑量 RCT 中認知效應不一致（部分領域改善、部分無效或記憶/處理速度受損）；開放標籤維持治療顯示多領域認知改善，但多為組內比較，難以區分直接促認知效應、練習效應或抗憂鬱反應帶來的間接改善。</p>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">抗精神病藥物</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42762641/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>雙相情緒障礙症患者客觀與主觀睡眠測量的一致性：系統性回顧與荟萃分析</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>15 研究（N=572）顯示總睡眠時間一致性尚可（主觀較高但正相關），但入睡潛伏期（主觀較長）、睡眠效率（主觀較高）、睡醒後清醒時間（主觀較短）一致性差；建議篩選用問卷、追蹤用活動記錄儀。</p>
+          <div class="card-footer">
+            <span class="tag">睡眠與晝夜節律</span><span class="tag">認知功能</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42772525/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👩‍🍼</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>育齡女性雙相情緒障礙症停用 valproate 後的治療策略：法國與英國保險資料庫研究</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>分析 10,087 位停用 valproate 的育齡女性，66-63% 成功轉換替代療法（以 lamotrigine、lithium 為主）；32-22% 未使用任何情緒穩定劑；成功因子含索引日前 90 天曾用 lamotrigine/lithium、減劑過程、懷孕；年齡較大、病程長、停藥後 3 月無替代治療者易復用 valproate。</p>
+          <div class="card-footer">
+            <span class="tag">情緒穩定劑</span><span class="tag">產期雙相</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42700484/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔗</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>憂鬱與輕躁狂症狀的網絡結構與橋接機制：大規模精神科門診樣本研究</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>6913 位門診患者網絡分析顯示，易怒（HCL26）、自殺念慮（BDI-II9）、不耐煩（HCL25）橋接強度最高；社交活動（HCL15）與興趣喪失（BDI-II12）橋介中心性最高，連結行為激活與憂鬱症狀；憂鬱組整體網絡連結更強。</p>
+          <div class="card-footer">
+            <span class="tag">躁症發作</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42641304/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🪡</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>電針透過腸-代謝物-大腦軸重塑緩解慢性疼痛合併憂鬱：恢復 mPFC Glu/GABA 平衡</h3>
+          <p class="journal-source">Translational psychiatry</p>
+          <p>電針在 SNI 大鼠模型中增加腸道菌群多樣性、抑制致病菌、豐富 SCFA 產生菌，透過吡啶甲酸介導 GABA 能神經傳遞，恢復 mPFC Glu/GABA 平衡（EAAT2/GAD67 正常化），雙向緩解機械性過敏痛與快感缺失。</p>
+          <div class="card-footer">
+            <span class="tag">中醫與針灸</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42963371/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠與晝夜節律</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">復發預防</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鋰鹽治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">情緒穩定劑</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">抗精神病藥物</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">輕躁症</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">生物標記</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">中醫與針灸</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">產期雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">功能復原</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">鋰鹽</span><span class="keyword">Elunetirom</span><span class="keyword">Dimdazenil</span><span class="keyword">認知重塑</span><span class="keyword">早期預警信號</span><span class="keyword">Valproate 停藥</span><span class="keyword">凱他命</span><span class="keyword">睡眠測量</span><span class="keyword">症狀網絡</span><span class="keyword">電針</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-ultra-550b-a55b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
