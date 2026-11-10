@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年11月10日</title>
+<meta name="description" content="2026年11月10日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月10日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙的精準醫學轉型，亮點包括：血液生物標記物對情緒狀態與自殺風險的預測價值、鋰鹽長期腎臟風險的劑量依賴性證據、躁症發作後功能復原的免疫代謝預測因子、以及 fNIRS 搭配圖注意力網路的無創診斷分類新突破。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>下一代精準醫學應用於情緒障礙：可重現的血液生物標記物實現客觀診斷、亞型分類與標的治療</h3>
+          <p class="journal-source">Molecular Psychiatry &middot; Next-generation precision medicine for mood disorders: reproducible blood biomarkers enable objective diagnostics, subtyping, and targeted therapeutics</p>
+          <p>大型跨診斷研究發現可重現的血液轉錄組生物標記物，能區分憂鬱/躁狂狀態、預測未來住院風險，並鑑別雙相與單相憂鬱，為客觀診斷與精準用藥奠定分子基礎。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">跨診斷精神科患者隊列（含雙相情緒障礙、重性憂鬱症）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">全血轉錄組測序（微陣列與 RNA-seq 双平台驗證）篩選生物標記物</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同情緒狀態（低落 vs. 高昂）、不同診斷組別、健康對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">鑑定出可預測憂鬱/躁狂狀態、未來住院風險及雙相診斷的可重現基因表達標記物組合</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42547801/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>雙相情緒障礙老年患者長期鋰鹽暴露與慢性腎臟病風險：系統性回顧與藥物流行病學分析</h3>
+          <p class="journal-source">Current Opinion in Psychiatry &middot; Long term lithium exposure and chronic kidney disease in the elderly with bipolar disorder: a systematic review and meta-analysis</p>
+          <p>針對 50 歲以上雙相患者的 6 組隊列荟萃分析顯示，鋰鹽使 CKD 風險增加 62%（HR 1.62），但風險呈血濃度依賴性（高濃度組 HR 2.07），以 valproate 為對照時風險減弱（HR 1.39），支持維持低有效血濃度而非禁用鋰鹽。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">年齡 ≥50 歲、診斷為雙相情緒障礙的成人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">長期鋰鹽治療（不同血濃度層級）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">非鋰鹽治療組、valproate 治療組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">新發慢性腎臟病（CKD）風險，呈血濃度依賴性；以 valproate 為對照時關聯性減弱</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">鋰鹽治療</span><span class="tag">復發預防</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42992687/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">📊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>躁症發作後功能緩解的臨床負擔與免疫代謝相關因子：680 例住院病例的回顧性隊列研究</h3>
+          <p class="journal-source">Journal of Affective Disorders &middot; Beyond symptom resolution: Clinical burden and immunometabolic correlates of functional remission after mania</p>
+          <p>72.6% 躁症住院病例達到症狀緩解，但功能緩解（GAF≥70）僅與疾病慢性度指標（病程、DUBD、入院 GAF）及血小板淋巴球比值（PLR）獨立相關，提示功能復原受疾病負荷主導，PLR 為潛在免疫代謝預測標記。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">因躁症發作住院的雙相 I 型患者（680 個躁症發作事件）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">標準住院治療後出院時功能評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">功能緩解組 vs. 非功能緩解組（GAF ≥70 vs. <70）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">功能緩解的獨立預測因子：較短病程、較短 DUBD、較高入院 GAF、較高 PLR；混合效應模型驗證 PLR 持續顯著</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">功能復原</span><span class="tag">躁症發作</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42815732/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🌿</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>雙相情緒障礙患者血漿內源性大麻素動態：從急性躁狂到緩解期的縱向追蹤與大麻使用的干擾效應</h3>
+          <p class="journal-source">Journal of Affective Disorders &middot; Plasma endocannabinoid levels in bipolar disorder: Differences between manic and euthymic states and the impact of cannabis use</p>
+          <p>縱向追蹤 23 例 BD-I 患者從急性躁狂到臨床緩解，發現非大麻使用者的安納酰胺 (AEA) 和 2-AG 顯著下降，提示內源性大麻素系統參與狀態轉換；大麻使用者此調節機制受損，可能阻礙躁狂恢復。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相 I 型患者，急性躁狂期 (T0) 至臨床穩定期 (T1) 縱向追蹤</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自然病程觀察（無藥物干預），分層分析大麻使用與否</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">大麻使用者 vs. 非使用者；T0 躁狂期 vs. T1 緩解期</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">非使用者 AEA 與 2-AG 於緩解期顯著下降（p<0.05）；大麻使用者無顯著變化（交互作用 p=0.016, 0.029），提示大麻干擾內源性調節</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">躁症發作</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42735776/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>品質感知遮罩傳播圖注意力網路：無需通道插值的 fNIRS 雙相情緒障礙分類新架構</h3>
+          <p class="journal-source">Journal of Neural Engineering &middot; Quality-aware mask-propagation graph attention for fNIRS-based bipolar disorder classification without channel interpolation</p>
+          <p>提出 SoftMaskGAT 模型，處理 fNIRS 噪聲通道問題，在 197 受試者（93 BD vs 104 HC）語言流暢任務中達 AUC 0.825，右側 Sylvian 周區為關鍵分類特徵區，為攜帶式無創診斷工具鋪路。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">93 例雙相情緒障礙患者 vs. 104 例健康對照</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">48 通道 fNIRS 執行語言流暢任務，SoftMaskGAT 深度學習分類器</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">通道刪除法、空間插值法、二元加權法等傳統噪聲處理策略</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">融合模型 AUC 0.825 (95%CI 0.760-0.885)；右側 perisylvian 區為核心分類貢獻區；模型對通道缺失具魯棒性</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42987435/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⌚</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>雙相情緒障礙病程對生理數位訊號的影響：穩定期患者的觀察性研究</h3>
+          <p class="journal-source">JMIR Mental Health</p>
+          <p>利用 Empatica E4 手環監測 80 例緩解期 BD 患者 48 小時 EDA 與 HR，發現病程年限、發作次數、優勢極性會改變基線自主神經生理訊號，支持數位生物標記反映疾病負荷。</p>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">功能復原</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42981701/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🩸</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>雙相情緒障礙患者血漿脂質與自殺意念的關聯：FACE-BD 隊列回顧與前瞻分析</h3>
+          <p class="journal-source">European Neuropsychopharmacology</p>
+          <p>3736 例 BD 患者數據顯示，總膽固醇與 LDL-C 與終身自殺意念/企圖正相關；前瞻分析提示基線三酸甘油酯預測一年內新發自殺意念，血脂或可作為自殺風險生物標記。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42815091/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📈</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>藥物未治療首發躁症的外周免疫代謝標記與定量 EEG：病例對照研究</h3>
+          <p class="journal-source">Journal of Affective Disorders</p>
+          <p>60 例藥物未治療首發躁症患者呈現單核球淋巴球比值 (MLR) 升高、白蛋白降低，且腦電頻譜功率廣泛增高；白蛋白低相關前額/中央 Beta 功率增高，提示免疫-代謝-皮質振盪耦合改變。</p>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">躁症發作</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42692293/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📉</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>雙相譜系障礙雙月情緒-自殺意念動態：動態結構方程模型研究</h3>
+          <p class="journal-source">Journal of Affective Disorders</p>
+          <p>434 例 BSD 患者雙月追蹤發現：躁症單向預測後續自殺意念 (SI) 上升；憂鬱與 SI 雙向耦合；敵意、攻擊性、衝動性特質預測更高 SI 平均值、持續性與變異性，支持個體化軌跡監測。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42521090/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧬</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>精神障礙與心臟衰竭亞型的共享遺傳架構：多性狀全基因組關聯分析</h3>
+          <p class="journal-source">Journal of the American Heart Association</p>
+          <p>UK Biobank 數據證實雙相障礙等精神疾病增加心臟衰竭風險；多性狀 GWAS 鑑定 607 多效性變異，精細定位指向 TMEM18、NKX2-2、XRN2 等位點，單細胞分析優先鑑定 FOXP1、TMEM106B 為心臟相關多效基因。</p>
+          <div class="card-footer">
+            <span class="tag">基因學</span><span class="tag">復發預防</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42925051/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">生物標記</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">7</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">躁症發作</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:57%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:42%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自殺防治</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:42%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">功能復原</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:28%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鋰鹽治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">生物標記物</span><span class="keyword">精準醫學</span><span class="keyword">鋰鹽腎毒性</span><span class="keyword">功能緩解</span><span class="keyword">fNIRS診斷</span><span class="keyword">內源性大麻素</span><span class="keyword">自殺意念動態</span><span class="keyword">免疫代謝</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-ultra-550b-a55b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
