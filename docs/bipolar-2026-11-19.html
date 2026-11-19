@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bipolar Brain &middot; 雙相情緒障礙症文獻日報 &middot; 2026年11月19日</title>
+<meta name="description" content="2026年11月19日 雙相情緒障礙症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f8; --surface: #ffffff; --line: #d0dbe8; --text: #1a2a3a; --muted: #5a6a7a; --accent: #2563eb; --accent-soft: #dbeafe; --accent-deep: #1d4ed8; --card-bg: color-mix(in srgb, var(--surface) 95%, #f0f4f8); --gradient-start: #1e3a5f; --gradient-end: #2563eb; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: linear-gradient(135deg, #f0f4f8 0%, #e8f0fe 50%, #f0f4f8 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(37,99,235,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(30,58,95,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(30,58,95,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #166534; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(22,101,52,0.1); border-radius: 4px; }
+  .utility-mid { color: #92400e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(146,64,14,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,106,122,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(240,244,248,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(37,99,235,0.15); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 12px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(30,58,95,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(30,58,95,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } .clinic-links { gap: 8px; } .clinic-link { padding: 14px 18px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Bipolar Brain &middot; 雙相情緒障礙症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月19日</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於雙相情緒障礙症的症狀網絡分析、認知功能治療效果、免疫基因調控機制、功能性緩解預測因子，以及共同風險基因 AKAP11 的星形膠質細胞脂質代謝新機制，涵蓋臨床表型、治療認知影響、分子機制與預後預測等多維度研究進展。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>躁症與混合型雙相情緒障礙症的症狀網絡分析：繪製交叉路口</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Symptom networks in manic and mixed presentations of bipolar disorder: Mapping the crossroads.</p>
+          <p>利用 1384 例患者數據發現躁鬱症狀形成截然不同但相互連接的叢集，識別出「激活-苦悶」叢集為混合型核心，DSM-IV 躁症與混合型網絡結構差異顯著，DSM-5 混合特徵則反映躁症譜系內的抑鬱負荷變異。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">DSM-IV 診斷為躁症或混合發作的雙相 I 型障礙患者 (N=1384)，來自五項 RCT 基線數據</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無介入（觀察性網絡分析），使用 YMRS 與 MADRS 建構症狀網絡</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">DSM-IV 躁症發作 vs. 混合發作；DSM-IV 混合發作 vs. DSM-5 帶混合特徵躁症發作</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">症狀網絡拓撲結構、叢集識別、中心性指標、全域連結強度比較</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">混合發作</span><span class="tag">躁症發作</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42686073/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>喪失精神分裂症與雙相情緒障礙症風險基因 Akap11 破壞星形膠質細胞脂質代謝並增加神經元活動</h3>
+          <p class="journal-source">Cell reports &middot; Loss of schizophrenia and bipolar disorder risk gene Akap11 disrupts astrocyte lipid metabolism and increases neuronal activity.</p>
+          <p>發現 AKAP11 缺失導致星形膠質細胞膽固醇/脂肪酸代謝上調、cAMP/PKA 訊號異常與脂質滴堆積，進而增加神經元興奮性；鋰鹽治療反而加劇脂質堆積，揭示共同風險基因透過星形膠質細胞脂質稳態調控突觸功能的新機制。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">Akap11 突變小鼠模型、人類 iPSC 衍生星形膠質細胞與神經元共培養系統</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Akap11 基因敲除 / 缺失；藥理干預脂質代謝（如他汀類）；鋰鹽處理</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">野生型對照組；未處理突變組 vs. 脂質代謝干預組 vs. 鋰鹽處理組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">轉錄組/蛋白質體/代謝組變化、脂質滴堆積、cAMP/PKA 訊號、神經元興奮性傳遞、體內行為表現</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">基因學</span><span class="tag">鋰鹽治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43043755/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧫</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>雙相情緒障礙症免疫細胞特異性基因調控網絡繪圖：從單細胞孟德爾隨機化到藥物靶點探索</h3>
+          <p class="journal-source">Psychiatry research &middot; Mapping the Immune cell-specific gene regulatory network in bipolar disorder: A framework from scTWMR to exploratory drug-target annotation.</p>
+          <p>整合單細胞轉錄組與孟德爾隨機化，鑑定 33 個免疫細胞特異性基因關聯，鎖定 CD8+ 效應 T 細胞、漿細胞與 B 細胞為核心細胞類型，驗證 MAD1L1/APOM/NFKBIL1 共定位位點，並篩選出針對 APOM、TMEM258、NFKBIL1 的潛在藥物候選。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雙相情緒障礙症 GWAS 數據 (41,917 病例 / 371,549 對照) 與 14 種免疫細胞類型的 cis-eQTL 數據</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單細胞轉錄組全基因組孟德爾隨機化 (scTWMR) 分析框架</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同免疫細胞亞型的基因表達對 BD 風險的因果效應比較；共定位分析驗證共享因果變異</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">33 個基因-免疫細胞關聯、富集通路（細胞週期、晝夜節律、神經發炎）、PPI 核心模組、探索性藥物靶點標註</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">基因學</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42743600/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">📊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>超越症狀緩解：躁症發作後功能性緩解的臨床負擔與免疫代謝相關因子</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Beyond symptom resolution: Clinical burden and immunometabolic correlates of functional remission after mania.</p>
+          <p>680 例躁症住院發作隊列顯示 72.6% 達功能性緩解 (GAF≥70)；多變量分析確認病程長度、未治療病程 (DUBD)、入院 GAF、血小板淋巴球比率 (PLR) 為獨立預測因子，PLR 為最一致的免疫代謝標記，預測模型 AUC 0.78。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">因躁症發作住院的雙相 I 型障礙患者 (680 個發作事件)</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">常規住院治療（無特定干預），觀察臨床與實驗室指標</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">功能性緩解組 (GAF≥70) vs. 未緩解組；混合效應模型調整重複發作</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">出院時功能性緩解率、獨立預測因子 (病程、DUBD、入院 GAF、PLR、白血球、性別、丙戊酸使用)、預測模型 AUC</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">功能復原</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42815732/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>氯胺酮與艾司氯胺酮治療重性憂鬱症與雙相情緒障礙症的認知效應：系統性綜述</h3>
+          <p class="journal-source">Psychiatry research &middot; Cognitive effects of ketamine and esketamine treatment for major depressive and bipolar disorder: a systematic review.</p>
+          <p>納入 22 研究 (N=2441) 發現單劑量 RCT 中認知效果不一 (部分領域改善、部分無效或記憶/處理速度受損)；開放標籤維持療法顯示記憶、注意力、語言、處理速度、言語學習改善，但缺乏對照組，難以區分直接促認知效果、練習效應或抗憂鬱反應次級改善。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">成人重性憂鬱症 (MDD)、雙相情緒障礙症 (BD) 與治療抗性憂鬱症 (TRD) 患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">氯胺酮 (單劑量 0.5 mg/kg 或維持) 與艾司氯胺酮 (0.25 mg/kg)</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">RCT 中之安慰劑/對照組；開放標籤研究為組內前後比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">客觀認知領域表現 (記憶、注意力、執行功能、處理速度、語言/言語學習)</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">認知功能</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42762641/" target="_blank">閱讀原文 →</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧑‍⚕️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>青少年憂鬱症中情緒高揚預後較差，但不增加成人精神服務轉介</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>MILESTONE 研究二次分析 (n=219) 發現基線情緒高揚嚴重度預測 24 倍月 HoNOSCA 評分較差 (β=0.186)，情緒不穩則無預測力；兩者均不預測轉介成人精神服務，提示需警惕青少年憂鬱中躁鬱特徵的長期預後影響。</p>
+          <div class="card-footer">
+            <span class="tag">兒少雙相</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43051377/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>重性憂鬱症 BOLD-CSF 耦合動力學改變：來自兩個獨立數據集的證據</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>雙隊列 rs-fMRI 研究 (探索隊列 MDD 140/HC 110；驗證隊列 40/58) 發現 MDD 廣泛區域、網絡與全腦層面 BOLD-CSF 耦合減弱，涉及前額頂、注意、皮層下等網絡，提示膠質淋巴系統清除功能可能受損，為神經發炎機制提供新影像標記。</p>
+          <div class="card-footer">
+            <span class="tag">神經影像</span><span class="tag">生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43050837/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📉</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>不良童年經驗與成人期社會隔離/孤獨的關聯：中國全國橫斷面研究</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>2.4 萬中國成人數據顯示 ACEs 與孤獨 (PR=1.24/每增一項) 關聯顯著強於社會隔離 (PR=1.04)；≥4 項 ACEs 與孤獨關聯隨年齡增強 (≥60 歲 PR=2.71)，提示臨床應常規評估高 ACEs 者的孤獨感而非僅看結構性隔離。</p>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">自殺防治</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43051376/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🛡️</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>青少年憂鬱症狀、自殺意念與自殺嘗試的縱向症狀級網絡分析</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>Add Health 縱向數據 (N=3234) 顯示憂鬱症狀與自殺意念從青春期到成年期雙向預測；症狀層面「心境低落/負性情感」核心症狀最持續連結自殺風險，關鍵症狀隨發展階段變化，支持發展階段量身訂做的自殺防治策略。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">雙相憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43050832/" target="_blank">PubMed →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚠️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>精神醫學生物標記研究的不可靠性</h3>
+          <p class="journal-source">JAMA psychiatry</p>
+          <p>點評精神醫學生物標記發現中五大常見不可靠原則 (如樣本量不足、過度擬合、缺乏外部驗證等)，回顧 6 篇 MDD 生物標記文獻並提出嚴謹內部驗證策略，呼籲提升研究嚴謹度與可重複性。</p>
+          <div class="card-footer">
+            <span class="tag">生物標記</span><span class="tag">基因學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43050222/" target="_blank">PubMed →</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">混合發作</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">基因學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">生物標記</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">功能復原</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知功能</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">雙相憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自殺防治</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少雙相</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鋰鹽治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🏷️</span>關鍵字</div><div class='keywords'><span class="keyword">症狀網絡分析</span><span class="keyword">混合情感狀態</span><span class="keyword">AKAP11</span><span class="keyword">星形膠質細胞</span><span class="keyword">脂質代謝</span><span class="keyword">免疫細胞亞型</span><span class="keyword">孟德爾隨機化</span><span class="keyword">功能性緩解</span><span class="keyword">血小板淋巴球比率</span><span class="keyword">氯胺酮</span><span class="keyword">認知功能</span><span class="keyword">青少年雙相障礙</span><span class="keyword">自殺風險</span><span class="keyword">膠質淋巴系統</span><span class="keyword">生物標記驗證</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科診療服務</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📬</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">接收最新身心醫學資訊</div>
+        </div>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-ultra-550b-a55b</span>
+    <span><a href="https://github.com/u8901006/bipolar-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
